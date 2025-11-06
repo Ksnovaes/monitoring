@@ -1,7 +1,7 @@
 name: Site Monitor
 on: 
   schedule:
-    -cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 jobs:
   check-sites:
@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Code Checkout
         uses: actions/checkout@v3
-        
+
       - name: Run script
         run: ./check_site.sh
